@@ -37,7 +37,7 @@ function App() {
               the best investments I’ve made in myself. ”
             </p>
           </div>
-          <div className="bg-[#ffffff] 0 grid mobile:row-span-2">
+          <div className="bg-[#ffffff]  grid mobile:row-span-2">
             <h3>Kira Whittle</h3>
             <h4>Verified Graduate</h4>
             <h1>Such a life-changing experience. Highly recommended!</h1>
