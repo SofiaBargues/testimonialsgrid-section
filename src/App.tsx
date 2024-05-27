@@ -5,24 +5,27 @@ function App() {
     <div className="grid mobile:justify-center  mobile:h-screen mobile:w-screen">
       <div className=" bg-[#edf2f8] mobile:m-auto mobile:p-[156px] gap-4">
         <div className="grid mobile:grid-cols-4  grid-cols-1 gap-4 ">
-          <div className="grid mobile:col-span-2 bg-[#733fc8]">
-            <img src={image}></img>
-            <h3> Daniel Clifford</h3>
-            <h4>Verified Graduate</h4>
-            <h1>
-              I received a job offer mid-course, and the subjects I learned were
-              current, if not more so, in the company I joined. I honestly feel
-              I got every penny’s worth.
-            </h1>
-            <p>
-              “ I was an EMT for many years before I joined the bootcamp. I’ve
-              been looking to make a transition and have heard some people who
-              had an amazing experience here. I signed up for the free intro
-              course and found it incredibly fun! I enrolled shortly thereafter.
-              The next 12 weeks was the best - and most grueling - time of my
-              life. Since completing the course, I’ve successfully switched
-              careers, working as a Software Engineer at a VR startup. ”
-            </p>
+          <div className="grid mobile:col-span-2 bg-[#733fc8] relative">
+            <img className="absolute right-10 top-0 " src={image}></img>
+            <div className="z-10">
+              <h3> Daniel Clifford</h3>
+              <h4>Verified Graduate</h4>
+              <h1>
+                I received a job offer mid-course, and the subjects I learned
+                were current, if not more so, in the company I joined. I
+                honestly feel I got every penny’s worth.
+              </h1>
+              <p>
+                “ I was an EMT for many years before I joined the bootcamp. I’ve
+                been looking to make a transition and have heard some people who
+                had an amazing experience here. I signed up for the free intro
+                course and found it incredibly fun! I enrolled shortly
+                thereafter. The next 12 weeks was the best - and most grueling -
+                time of my life. Since completing the course, I’ve successfully
+                switched careers, working as a Software Engineer at a VR
+                startup. ”
+              </p>
+            </div>
           </div>
           <div className="bg-[#49556b] grid ">
             <h3> Jonathan Walters</h3>
