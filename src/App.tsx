@@ -37,44 +37,14 @@ function Card({
         <div className="flex flex-row-2">
           <Avatar img={avatarImage} color={avatarColor} />
           <div className="ml-5 flex flex-col justify-center">
-            <h3>{personName}</h3>
+            <h3 className="text-base">{personName}</h3>
             {/* TODO: ligther color text-slate-300 */}
-            <h4 className="text   ">Verified Graduate</h4>
+            <h4 className="text-sm   ">Verified Graduate</h4>
           </div>
         </div>
         <h1 className="text-xl my-4 font-bold">{title}</h1>
         {/* TODO: ligther color text-slate-300 */}
         <p className="text-base text-slate-300 my-4 ">{description}</p>
-      </div>
-    </div>
-  );
-}
-function Card1() {
-  return (
-    <div className="rounded-lg p-10 text-white grid mobile:col-span-2 bg-[#733fc8] relative">
-      <img className="absolute right-10 top-0 " src={image}></img>
-      <div className="z-10 text-[13px] m-auto">
-        <div className="flex flex-row-2">
-          <Avatar img={daniel} color="hsl(263, 60%, 62%)" />
-          <div className="ml-5 flex flex-col justify-center">
-            <h3> Daniel Clifford</h3>
-            <h4 className="text  text-slate-300 ">Verified Graduate</h4>
-          </div>
-        </div>
-        <h1 className="text-xl my-4 font-bold">
-          I received a job offer mid-course, and the subjects I learned were
-          current, if not more so, in the company I joined. I honestly feel I
-          got every penny’s worth.
-        </h1>
-        <p className="text-base text-slate-300 my-4 ">
-          “ I was an EMT for many years before I joined the bootcamp. I’ve been
-          looking to make a transition and have heard some people who had an
-          amazing experience here. I signed up for the free intro course and
-          found it incredibly fun! I enrolled shortly thereafter. The next 12
-          weeks was the best - and most grueling - time of my life. Since
-          completing the course, I’ve successfully switched careers, working as
-          a Software Engineer at a VR startup. ”
-        </p>
       </div>
     </div>
   );
@@ -86,6 +56,7 @@ function App() {
       <div className="mobile:m-auto mobile:p-[156px] gap-6">
         <div className="grid mobile:grid-cols-4  grid-cols-1 gap-4 ">
           <Card
+            className={"mobile:col-span-2 bg-[#733fc8] relative text-slate-100"}
             personName={"Daniel Clifford"}
             description={
               " “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ” "
@@ -95,7 +66,6 @@ function App() {
             }
             avatarImage={daniel}
             avatarColor={"hsl(263, 60%, 62%)"}
-            className={"mobile:col-span-2 bg-[#733fc8] relative text-slate-100"}
           />
           <div className="bg-[#49556b] ">
             <Avatar img={jonathan} color="hsl(0, 0%, 41%)" />
