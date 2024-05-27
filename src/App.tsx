@@ -2,10 +2,10 @@ import image from "./assets/images/bg-pattern-quotation.svg";
 
 function App() {
   return (
-    <div className="grid mobile:justify-center  mobile:h-screen mobile:w-screen">
-      <div className=" bg-[#edf2f8] mobile:m-auto mobile:p-[156px] gap-4">
+    <div className="grid mobile:justify-center  bg-[#edf2f8]  mobile:h-screen mobile:w-screen">
+      <div className="mobile:m-auto mobile:p-[156px] gap-4">
         <div className="grid mobile:grid-cols-4  grid-cols-1 gap-4 ">
-          <div className="grid mobile:col-span-2 bg-[#733fc8] relative">
+          <div className="grid mobile:col-span-2 font-barlow bg-[#733fc8] relative">
             <img className="absolute right-10 top-0 " src={image}></img>
             <div className="z-10">
               <h3> Daniel Clifford</h3>
@@ -27,7 +27,7 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="bg-[#49556b] grid ">
+          <div className="bg-[#49556b]  grid ">
             <h3> Jonathan Walters</h3>
             <h4>Verified Graduate</h4>
             <h1>The team was very supportive and kept me motivated</h1>

@@ -6,6 +6,11 @@ export default {
       mobile: "375px",
       desktop: "1440px",
     },
+    extend: {
+      fontFamily: {
+        barlow: ["Barlow Semi Condensed", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
