@@ -9,7 +9,7 @@ function Avatar({ color, img }) {
   return (
     <img
       style={{ borderColor: color }}
-      className="rounded-full h-12  border-4"
+      className="rounded-full h-12 border-4 "
       src={img}
     ></img>
   );
@@ -23,6 +23,7 @@ function Card({
   avatarColor,
   className,
   bgImage,
+  whiteText = false,
 }: {
   personName: string;
   description: string;
@@ -31,19 +32,28 @@ function Card({
   avatarColor: string;
   className: string;
   bgImage?: string;
+  whiteText?: boolean;
 }) {
   return (
-    <div className={"rounded-lg relative p-10 grid " + className}>
+    <div
+      className={
+        "rounded-lg relative p-7 grid " +
+        className +
+        " " +
+        (whiteText ? "text-slate-100" : "text-slate-600")
+      }
+    >
       {bgImage && (
         <img className="absolute right-10 top-0 " src={bgImage}></img>
       )}
-      <div className="z-10 text-[13px] m-auto">
+
+      <div className="z-10 text-[13px]">
         <div className="flex flex-row-2">
           <Avatar img={avatarImage} color={avatarColor} />
           <div className="ml-5 flex flex-col justify-center">
-            <h3 className="text-base">{personName}</h3>
+            <h3 className="text-base ">{personName}</h3>
             {/* TODO: ligther color text-slate-300 */}
-            <h4 className="text-sm   ">Verified Graduate</h4>
+            <h4 className="text-xs text-slate-200">Verified Graduate</h4>
           </div>
         </div>
         <h1 className="text-xl my-4 font-bold">{title}</h1>
@@ -60,8 +70,9 @@ function App() {
       <div className="xl:m-auto xl:p-[156px] gap-6">
         <div className="grid xl:grid-cols-4  grid-cols-1 m-4 gap-4 ">
           <Card
+            whiteText={true}
             bgImage={image}
-            className={"xl:col-span-2 bg-[#733fc8] relative text-slate-100"}
+            className={"xl:col-span-2 bg-[#733fc8] "}
             personName={"Daniel Clifford"}
             description={
               " “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ” "
@@ -73,7 +84,8 @@ function App() {
             avatarColor={"hsl(263, 60%, 62%)"}
           />
           <Card
-            className={"bg-[#49556b] text-white"}
+            whiteText={true}
+            className={"bg-[#49556b]"}
             personName={"Jonathan Walters"}
             description={
               " “ I started as a total newbie with virtually no coding skills. I now work as a xl engineer for a big company. This was one of the best investments I’ve made in myself. ” "
@@ -104,7 +116,8 @@ function App() {
             avatarColor={"hsl(0, 0%, 100%)"}
           />
           <Card
-            className={"bg-[#18202d] grid xl:col-span-2 text-white"}
+            whiteText={true}
+            className={"bg-[#18202d] grid xl:col-span-2"}
             personName={"Patrick Abrams"}
             description={
               "  “ The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of xlart and amazing people. ” "
