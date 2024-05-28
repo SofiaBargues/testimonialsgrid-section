@@ -52,11 +52,11 @@ function Card({
 
 function App() {
   return (
-    <div className="grid mobile:justify-center  font-barlow  bg-[#edf2f8]  mobile:h-screen mobile:w-screen">
-      <div className="mobile:m-auto mobile:p-[156px] gap-6">
-        <div className="grid mobile:grid-cols-4  grid-cols-1 gap-4 ">
+    <div className="grid xl:justify-center  font-barlow  bg-[#edf2f8]  xl:h-screen xl:w-screen">
+      <div className="xl:m-auto xl:p-[156px] gap-6">
+        <div className="grid xl:grid-cols-4  grid-cols-1 gap-4 ">
           <Card
-            className={"mobile:col-span-2 bg-[#733fc8] relative text-slate-100"}
+            className={"xl:col-span-2 bg-[#733fc8] relative text-slate-100"}
             personName={"Daniel Clifford"}
             description={
               " “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ” "
@@ -74,11 +74,11 @@ function App() {
             <h1>The team was very supportive and kept me motivated</h1>
             <p>
               “ I started as a total newbie with virtually no coding skills. I
-              now work as a mobile engineer for a big company. This was one of
-              the best investments I’ve made in myself. ”
+              now work as a xl engineer for a big company. This was one of the
+              best investments I’ve made in myself. ”
             </p>
           </div>
-          <div className="bg-[#ffffff]  grid mobile:row-span-2">
+          <div className="bg-[#ffffff]  grid xl:row-span-2">
             <Avatar img={kira} color="hsl(0, 0%, 100%)" />
             <h3>Kira Whittle</h3>
             <h4>Verified Graduate</h4>
@@ -109,7 +109,7 @@ function App() {
               ”
             </p>
           </div>
-          <div className="bg-[#18202d] grid mobile:col-span-2">
+          <div className="bg-[#18202d] grid xl:col-span-2">
             <Avatar img={patrick} color="hsl(263, 55%, 52%)" />
             <h3>Patrick Abrams</h3>
             <h4>Verified Graduate</h4>
