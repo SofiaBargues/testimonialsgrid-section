@@ -52,11 +52,24 @@ function Card({
           <Avatar img={avatarImage} color={avatarColor} />
           <div className="ml-5 flex flex-col justify-center">
             <h3 className="text-base ">{personName}</h3>
-            <h4 className="text-xs text-slate-200">Verified Graduate</h4>
+            <h4
+              className={
+                "text-xs " + (whiteText ? "text-slate-200" : "text-slate-500")
+              }
+            >
+              Verified Graduate
+            </h4>
           </div>
         </div>
         <h1 className="text-xl my-4 font-bold">{title}</h1>
-        <p className="text-base text-slate-300 my-4">{description}</p>
+        <p
+          className={
+            "text-base  my-4 " +
+            (whiteText ? "text-slate-200" : "text-slate-500")
+          }
+        >
+          {description}
+        </p>
       </div>
     </div>
   );
@@ -64,13 +77,13 @@ function Card({
 
 function App() {
   return (
-    <div className="grid xl:justify-center  font-barlow  bg-[#edf2f8]  xl:h-screen xl:w-screen">
-      <div className="xl:m-auto xl:p-[156px] gap-6">
-        <div className="grid xl:grid-cols-4  grid-cols-1 m-4 gap-4 ">
+    <div className="min-h-screen grid xl:justify-center  font-barlow  bg-[#edf2f8]  xl:h-full xl:w-screen">
+      <div className="xl:m-auto xl:p-20 md:p-15  gap-6">
+        <div className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 m-4 gap-8 ">
           <Card
             whiteText={true}
             bgImage={image}
-            className={"xl:col-span-2 bg-[#733fc8] "}
+            className={"md:col-span-2 bg-[#733fc8] "}
             personName={"Daniel Clifford"}
             description={
               " “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the best - and most grueling - time of my life. Since completing the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ” "
@@ -93,7 +106,7 @@ function App() {
             avatarColor={"hsl(0, 0%, 41%)"}
           />
           <Card
-            className={"bg-[#ffffff] grid xl:row-span-2"}
+            className={"bg-[#ffffff] md:row-span-2 grid xl:row-span-2"}
             personName={"Kira Whittle"}
             description={
               " “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from professionals who can help me learn programming step by step. I was encouraged to enroll by a former student of theirs who can only say wonderful things about the program. The entire curriculum and staff did not disappoint. They were very hands-on and I never had to wait long for assistance.The agile team project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial could ever have. In fact, I’ve often referred to it during interviews as an example of my development experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 100% recommend! ” "
@@ -114,7 +127,7 @@ function App() {
           />
           <Card
             whiteText={true}
-            className={"bg-[#18202d] grid xl:col-span-2"}
+            className={"bg-[#18202d] md:col-span-2 grid xl:col-span-2"}
             personName={"Patrick Abrams"}
             description={
               "  “ The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of xlart and amazing people. ” "
