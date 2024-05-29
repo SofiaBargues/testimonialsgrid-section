@@ -37,10 +37,10 @@ function Card({
   return (
     <div
       className={
-        "rounded-lg relative p-7 grid " +
-        className +
+        "rounded-lg relative p-10 grid " +
+        (whiteText ? "text-slate-100" : "text-slate-600") +
         " " +
-        (whiteText ? "text-slate-100" : "text-slate-600")
+        className
       }
     >
       {bgImage && (
@@ -52,13 +52,11 @@ function Card({
           <Avatar img={avatarImage} color={avatarColor} />
           <div className="ml-5 flex flex-col justify-center">
             <h3 className="text-base ">{personName}</h3>
-            {/* TODO: ligther color text-slate-300 */}
             <h4 className="text-xs text-slate-200">Verified Graduate</h4>
           </div>
         </div>
         <h1 className="text-xl my-4 font-bold">{title}</h1>
-        {/* TODO: ligther color text-slate-300 */}
-        <p className="text-base text-slate-300 my-4 ">{description}</p>
+        <p className="text-base text-slate-300 my-4">{description}</p>
       </div>
     </div>
   );
@@ -104,7 +102,6 @@ function App() {
             avatarImage={kira}
             avatarColor={"hsl(0, 0%, 100%)"}
           />
-
           <Card
             className={"bg-[#ffffff]"}
             personName={"Jeanette Harmon"}
