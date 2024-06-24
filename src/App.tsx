@@ -5,7 +5,7 @@ import jonathan from "./assets/images/image-jonathan.jpg";
 import kira from "./assets/images/image-kira.jpg";
 import patrick from "./assets/images/image-patrick.jpg";
 
-function Avatar({ color, img }) {
+function Avatar({ color, img }: { color: any; img: any }) {
   return (
     <img
       style={{ borderColor: color }}
